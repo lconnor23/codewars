@@ -12,7 +12,13 @@
 
 // time = 11.8--> litres = 5
 
-// const chai = require("chai");
+
+// my solution
+function litres(time) {
+    return Math.floor(time * 0.5);
+  }
+
+  // const chai = require("chai");
 // const assert = chai.assert;
 // chai.config.truncateThreshold=0;
 
@@ -28,8 +34,3 @@
 //   });
 // });
 
-
-// my solution
-function litres(time) {
-    return Math.floor(time * 0.5);
-  }

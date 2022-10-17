@@ -5,17 +5,6 @@
 // Output :: "One".
 
 // If your language supports it, try using a switch statement.
-// const chai = require("chai");
-// const assert = chai.assert;
-// chai.config.truncateThreshold=0;
-
-// describe("Basic Tests",() =>{
-//   it("Testing for fixed tests", () => {
-//     assert.strictEqual(switchItUp(1),"One");
-//     assert.strictEqual(switchItUp(3),"Three");
-//     assert.strictEqual(switchItUp(5),"Five");
-//   });
-// });
 
 //My Solution
 function switchItUp(number){
@@ -39,3 +28,15 @@ function switchItUp(number){
     return['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'][number];
       
     }
+
+    // const chai = require("chai");
+// const assert = chai.assert;
+// chai.config.truncateThreshold=0;
+
+// describe("Basic Tests",() =>{
+//   it("Testing for fixed tests", () => {
+//     assert.strictEqual(switchItUp(1),"One");
+//     assert.strictEqual(switchItUp(3),"Three");
+//     assert.strictEqual(switchItUp(5),"Five");
+//   });
+// });

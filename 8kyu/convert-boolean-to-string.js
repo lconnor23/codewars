@@ -19,17 +19,17 @@ function boolToWord( bool ){
 
 
 // best practice
-// function boolToWord(bool){
-//   return bool ? 'Yes' : 'No';
-// }
+function boolToWord(bool){
+  return bool ? 'Yes' : 'No';
+}
 
 // other solutions
-// function boolToWork (bool){
-//   if(bool){
-//     return 'Yes';
-//   } else {
-//     return 'No'
-//   }
-// }
+function boolToWork (bool){
+  if(bool){
+    return 'Yes';
+  } else {
+    return 'No'
+  }
+}
 
-// let boolToWord = bool => bool? 'Yes' : 'No';
+let boolToWord = bool => bool? 'Yes' : 'No';
