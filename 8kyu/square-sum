@@ -9,6 +9,7 @@ function squareSum(arr){
   }
 
 //Other
+//My solution above didn't work because it was missing zero as an initial value. When used in the reduce method as the third parameter, it's specifies the initial value.
 function squareSum(numbers){
     return numbers.reduce((sum,num) => sum + (num * num), 0);
   }
