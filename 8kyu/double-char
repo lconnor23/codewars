@@ -1,0 +1,20 @@
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+// Examples (Input -> Output):
+// * "String"      -> "SSttrriinngg"
+// * "Hello World" -> "HHeelllloo  WWoorrlldd"
+// * "1234!_ "     -> "11223344!!__  "
+
+//My solution
+function doubleChar(str) {
+    let double = ''
+    for (i = 0; i < str.length; i++){
+      double += str[i] + str[i]
+    } return double
+  }
+
+  //I tried using .split .map .join but couldn't get the syntax quite right so I went with a loop thinking .map the problem was the methods I used rather than the syntax. I thought I had to write the string name before each method, but you only need it once in the beginning. One solution used these methods, so I went back and solved it again with the following solution:
+  function doubleChar(str) {
+    return str.split('').map(a => a + a).join('')  
+  }
+  
