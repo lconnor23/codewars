@@ -29,3 +29,8 @@ function points(games) {
     }
     return x
   }
+
+  //My other solution using map. Have to turn to string, then back to number to be able to iterate through and concatenate
+  function squareDigits(num){
+    return Number(num.toString().split('').map(x => x**2).join(''))
+  }
