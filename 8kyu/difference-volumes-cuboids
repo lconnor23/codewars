@@ -10,3 +10,8 @@
 function findDifference(a, b) {
     return Math.abs(a.reduce((x, y) => x*y) - b.reduce((x, y)=> x *y ))
   }
+
+  //Another solution
+  function solution(nums){
+    return nums != null ? nums.sort((a, b) => a - b) : []
+  }
