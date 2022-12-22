@@ -1,0 +1,39 @@
+// Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+
+// Examples
+// "hello"     -->  "hll"
+// "codewars"  -->  "cdwrs"
+// "goodbye"   -->  "gdby"
+// "HELLO"     -->  "HELLO"
+// don't worry about uppercase vowels
+// y is not considered a vowel for this kata
+
+//My solution
+function shortcut (string) {
+  let word = ''
+  string = string.split('')
+  for(let i = 0; i < string.length; i++){
+    if ((string[i] === 'a') || (string[i] === 'e') ||
+       (string[i] === 'i') || (string[i] === 'o') || (string[i] === 'u')){
+      word += ''
+    }else{
+      word += string[i]
+    }
+  }return word
+}
+
+//Other solution
+function shortcut(string) {
+    for (var result = "", i = 0; i < string.length; ++ i) {
+      if ("aeiou".indexOf(string[i]) == -1) {
+        result += string[i];
+      }
+    }
+    
+    return result;
+  }
+
+  //And another
+  function shortcut(string) {
+    return string.split("").filter(c => "aeiou".indexOf(c) < 0).join("");
+  }
