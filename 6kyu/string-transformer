@@ -1,0 +1,28 @@
+// Given a string, return a new string that has transformed based on the input:
+
+// Change case of every character, ie. lower case to upper case, upper case to lower case.
+// Reverse the order of words from the input.
+// Note: You will have to handle multiple spaces, and leading/trailing spaces.
+
+// For example:
+
+// "Example Input" ==> "iNPUT eXAMPLE"
+// You may assume the input only contain English alphabet and spaces.
+
+//My solution
+function stringTransformer(str) {
+  let transform = ''
+  str.split('')
+  for (let i = 0; i < str.length; i++){ 
+      if (str[i] === str[i].toUpperCase()){
+        transform += str[i].toLowerCase()
+      }else transform += str[i].toUpperCase()    
+    }return transform.split(' ').reverse().join(' ')
+}
+
+//Another solution. Have to split twice, once to reverse word order, then to iterate through each character
+function stringTransformer(str) {
+    return str.split(' ').reverse().join(' ').split('')
+      .map(a => a == a.toUpperCase() ? a.toLowerCase() : a.toUpperCase())
+      .join('')
+  }
