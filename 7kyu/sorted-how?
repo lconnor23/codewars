@@ -1,0 +1,24 @@
+// Complete the method which accepts an array of integers, and returns one of the following:
+
+// "yes, ascending" - if the numbers in the array are sorted in an ascending order
+// "yes, descending" - if the numbers in the array are sorted in a descending order
+// "no" - otherwise
+// You can assume the array will always be valid, and there will always be one correct answer.
+
+// My Solution
+function isSortedAndHow(array) {
+    //array has to be stored in const b/c the sort will mutate the original array
+    //joined with space so 2 digit numbers stay together
+    const original = array.join(' ')
+    let sorted = array.sort((a, b) => a - b).join(' ')
+   return original === sorted ? "yes, ascending" :
+         original === sorted.split(' ').reverse().join(' ') ? "yes, descending" :
+         "no"
+ }
+
+ //Another solution
+ function isSortedAndHow(arr) {
+    //this checks to see that every element is bigger/smaller than the one below it. Also accounts for zero index.
+    return arr.every((x,i)=>i==0||arr[i]>=arr[i-1])?'yes, ascending':
+           arr.every((x,i)=>i==0||arr[i]<=arr[i-1])?'yes, descending':'no'
+  }
