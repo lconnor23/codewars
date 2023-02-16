@@ -18,3 +18,11 @@ function wordsToMarks(string){
     value += alphabet.indexOf(string[i])
   }return value
 }
+
+//Another
+function wordsToMarks(string){
+    let value = 0
+    let abc = '0abcdefghijklmnopqrstuvwxyz'.split('')
+    string.split('').forEach(e => value += abc.indexOf(e))
+    return value
+  }
