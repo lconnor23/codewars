@@ -1,0 +1,29 @@
+// You get any card as an argument. Your task is to return the suit of this card (in lowercase).
+
+// Our deck (is preloaded):
+
+// ('3♣') -> return 'clubs'
+// ('3♦') -> return 'diamonds'
+// ('3♥') -> return 'hearts'
+// ('3♠') -> return 'spades'
+
+// My solution
+function defineSuit(card) {
+  // split card string
+  card = card.split('')
+  //target suit
+  //return suit in string
+  return card[card.length -1] === '♣'? 'clubs':
+         card[card.length -1] === '♦'? 'diamonds':
+         card[card.length -1] === '♥'? 'hearts' : 'spades'
+}
+
+//Another
+function defineSuit(card) {
+    return {
+      '♣' : 'clubs',
+      '♦' : 'diamonds',
+      '♥' : 'hearts',
+      '♠' : 'spades'
+    }[card.slice(-1)]
+  }
