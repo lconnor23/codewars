@@ -19,7 +19,7 @@ function nearestSq(n){
     return Math.abs(near1 - n) < Math.abs(near2 - n) ? near1 : near2
   //compare difference with n and return closest
   }
-
+}
   //Another. You can round the square of n to get closest
   function nearestSq(n){
     return Math.round(Math.sqrt(n))**2
