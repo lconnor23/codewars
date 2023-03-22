@@ -1,0 +1,20 @@
+function alphabetWar(fight)
+{
+  //populate 2 arrays with values
+  let leftArr = [0, 's', 'b', 'p', 'w']
+  let rightArr = [0, 'z', 'd', 'q', 'm']
+  //declare left and right variables for running sum
+  let leftSum = 0
+  let rightSum = 0
+  //loop through fight, find element index(power), add to proper sum
+  for(let i = 0; i < fight.length; i++) {
+    if (leftArr.includes(fight[i])){
+    leftSum += leftArr.indexOf(fight[i])
+  }else if (rightArr.includes(fight[i])){
+   rightSum += rightArr.indexOf(fight[i])
+  }
+  }
+  //return winner or tie
+   return leftSum > rightSum ? "Left side wins!":
+          rightSum > leftSum ? "Right side wins!" : "Let's fight again!";
+}
