@@ -1,0 +1,20 @@
+// Given a mixed array of number and string representations of integers, add up the non-string integers and subtract the total of the string integers.
+
+// Return as a number.
+
+// My solution
+function divCon(x){
+ //separate strings from nums
+  let nums = x.filter(e => typeof e === "number")
+  let str = x.filter(e => typeof e === "string")
+  //sum separate arrays
+  let sumInt = nums.reduce((a, b) => a + b, 0)
+  let sumStr = str.reduce((a, b) => a + Number(b), 0)
+  //return integers - strings
+  return sumInt - sumStr
+}
+
+//Simplified
+function divCon(x){
+    return x.reduce((acc, curr) => typeof curr === "number" ? acc + curr : acc - curr, 0)
+  }
