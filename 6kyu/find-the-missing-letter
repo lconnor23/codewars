@@ -17,9 +17,8 @@ function findMissingLetter(array){
 if (array[0] != array[0].toLowerCase()){
     letters = letters.toUpperCase()
     } 
-//find the index in letters of array[0], if -1; array.toLowerCase()
+//find the index in letters of array[0]
 let ind = letters.indexOf(array[0])
-  if (ind > 0){
     for (let i = 0; i < array.length; i++){
       if (array[i] != letters[ind+i]){
         return letters[ind + i]
@@ -27,4 +26,3 @@ let ind = letters.indexOf(array[0])
     }
   }
 //create a loop starting at that index, compare from that point up to end of array
-}
