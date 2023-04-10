@@ -1,0 +1,21 @@
+// Create the function consecutive(arr) that takes an array of integers and return the minimum number of integers needed to make the contents of arr consecutive from the lowest number to the highest number.
+
+// For example:
+// If arr contains [4, 8, 6] then the output should be 2 because two numbers need to be added to the array (5 and 7) to make it a consecutive array of numbers from 4 to 8. Numbers in arr will be unique.
+
+// My solution
+function consecutive(arr) {
+ let count = 0
+ arr.sort((a,b)=> a-b)
+  for(let i = arr.length-1; i > 0; i--){
+    if (arr[i] - arr[i-1] >1){
+      count+= arr[i] - arr[i-1] -1
+    }
+  }return count
+}
+
+function consecutive(arr) {
+    let length = arr.length
+    arr.sort((a, b) => a - b)
+      return length ? Math.max(...arr) - Math.min(...arr) -length + 1 : 0
+    }
