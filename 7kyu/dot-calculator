@@ -1,0 +1,25 @@
+// You'll have to return a string that contains dots, as many the equation returns. If the result is 0, return the empty string. When it comes to subtraction, the first number will always be greater than or equal to the second number.
+
+// Examples (Input => Output)
+// * "..... + ..............." => "...................."
+// * "..... - ..."             => ".."
+// * "..... - ."               => "...."
+// * "..... * ..."             => "..............."
+// * "..... * .."              => ".........."
+// * "..... // .."             => ".."
+// * "..... // ."              => "....."
+// * ". // .."                 => ""
+// * ".. - .."                 => ""
+
+// My soltuion
+function dotCalculator (equation) {
+  let operator = {
+    '+' : (a, b) => a + b,
+    '-' : (a, b) => a - b,
+    '*' : (a, b) => a * b,
+    '//' : (a, b) => a / b
+  }
+ const [a, sign, b] = equation.split(' ')
+ let x = operator[sign](a.length, b.length)
+ return '.'.repeat(x)
+}
