@@ -1,0 +1,16 @@
+// Find the sum of the odd numbers within an array, after cubing the initial integers. The function should return undefined if any of the values aren't numbers.
+
+// My solution
+function cubeOdd(arr) {
+  //check if arr is numbers
+  let sum = 0
+  console.log(arr)
+  if (arr.every(e => typeof e === 'number')){
+    for(let i = 0; i < arr.length; i++){
+      if (Math.abs(arr[i] % 2) === 1){
+        sum += (arr[i]**3)
+      }
+    }return sum
+  }
+
+}
