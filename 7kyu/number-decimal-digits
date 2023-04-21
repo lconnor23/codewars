@@ -2,7 +2,7 @@
 
 // All inputs will be valid.
 
-My solution
+// My solution
 function digits(n) {
 return n.toString().length
 }
