@@ -2,5 +2,5 @@
 
 // My solution
 function parseF(s) {
-  return parseFloat(s) || null;
-}
+    return isNaN(parseFloat(s)) ? null : parseFloat(s);
+  }
