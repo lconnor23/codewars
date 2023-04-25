@@ -14,3 +14,25 @@ const expandedForm = n => n.toString()
                             .filter(a => a > 0)
                             .reverse()
                             .join(" + ");
+
+
+                            //my process, didn't fully solve
+                            function expandedForm(num) {
+                                //determine num length
+                                //loop through
+                                //divide by 
+                                let string = ''
+                                num = num.toString().split('').reverse()
+                                let x = num.length
+                                let zero = '0'
+                              console.log(num, x)
+                                for(let i = x -1; i >= 0; i--){
+                                  if(i === 0) {
+                                    string += `${num[i]}`      
+                                  }
+                                  else{ if (num !== 0) {
+                                  string += `${num[i]}` + `${zero.repeat(i)} + `
+                                  }
+                              }
+                                }return string
+                              }
