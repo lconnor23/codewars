@@ -1,0 +1,20 @@
+// Count the number of occurrences of each character and return it as a (list of tuples) in order of appearance. For empty output return (an empty list).
+
+// Consult the solution set-up for the exact data structure implementation depending on your language.
+
+// Example:
+
+// orderedCount("abracadabra") == [['a', 5], ['b', 2], ['r', 2], ['c', 1], ['d', 1]]
+
+// My solution
+const orderedCount = function (text) {
+  text = text.split('')
+  let arr = []
+  console.log(text)
+  for (let i = 0; i < text.length; i++){
+    if (text.indexOf(text[i]) === i){     
+    let num = text.filter(e => e === text[i]).length
+    arr.push([text[i], num])
+    }
+  }return arr
+}
