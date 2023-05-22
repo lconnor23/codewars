@@ -12,3 +12,10 @@ function sumDigits(number) {
   number = Math.abs(number)
   return Number(number.toString().split('').reduce((a, b) => Number(a) + Number(b)))
 }
+
+//Got this one again, did similar solution
+function sumDigits(number) {
+  number = Math.abs(number)
+  number = number.toString().split('')
+  return number.reduce((a, b) => Number(a) + Number(b))
+}
