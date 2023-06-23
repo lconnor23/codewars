@@ -1,0 +1,21 @@
+// Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+// Examples:
+
+// * 'abc' =>  ['ab', 'c_']
+// * 'abcdef' => ['ab', 'cd', 'ef']
+
+// My solution
+function solution(str){
+  //define new array
+  let pairs = []
+  //check string length, if not even, add underscore
+  if (str.length % 2 !== 0){
+    str += '_'
+  }
+  //loop through, push 2 characters at a time
+  for(let i = 0; i < str.length; i+=2){
+    pairs.push(`${str[i]}${str[i+1]}`)
+  }
+  return pairs
+}
