@@ -1,0 +1,20 @@
+// Find the number with the most digits.
+
+// If two numbers in the argument array have the same number of digits, return the first one in the array.
+
+// My Solution
+function findLongest(array){
+  //declare num variable
+  let num = 0
+  //loop through, checking length. if length > num length, num = array[i]
+  for (let i = 0; i < array.length; i++){
+    if (array[i].toString().length > num.toString().length){
+      num = array[i]
+    }
+  }return num
+}
+
+//Another Solution
+function findLongest(array){
+    return array.reduce((a, b) => (b.toString().length > a.toString().length) ? b : a)
+    }
